@@ -7,11 +7,13 @@ in vec3 x_position;
 in float x_radius;
 in vec2 x_tex_coords;
 flat in int x_ground;
+in float x_height;
 
 out vec3 color;
 
 // Vector from the camera to the sun
 uniform vec3 sun_dir;
+uniform vec3 sun_pos;
 // FIXME This should be a `sampler2DShadow`, but glium doesn't expose it
 uniform sampler2D shadow_map;
 
@@ -96,10 +98,8 @@ void main() {
     // ==================
 
     // Calculate normal map relative to surface
-    // vec3 normal_map = texture(normals, x_tex_coords).rgb;
-
     vec3 normal_map;
-    vec2 tex = vec2(x_tex_coords.x, fract(x_tex_coords.y));
+    vec2 tex = vec2(x_tex_coords.x, x_tex_coords.y);
 
     if (x_ground == 1) {
         normal_map = texture(normal_grass, tex).rgb;
@@ -122,66 +122,29 @@ void main() {
     mat3 tbn = cotangent_frame(normal_map, x_position, x_tex_coords);
     vec3 real_normal = normalize(tbn * -(normal_map * 2.0 - 1.0));
 
+    // Get Fragment position
+    vec3 pixel_pos = vec3(x_position.x, x_position.y, x_height);
+    // Calculate vector from sun --> fragment
+    vec3 light = normalize(sun_pos - pixel_pos);
+    // Calculate vector from Fragment --> Camera
+    vec3 camera_dir = normalize(pixel_pos - light - sun_dir);
 
-    // Do the normal light calculation. Ambient light is not affected by shadow,
-    // other lights are coming from the sun so they're affected.
+    // Diffuse color is the material color
+    vec3 diffuse_color = x_material_color;
 
-    // Calculate diffuse light
-    float diffuse = max(0.0, dot(-sun_dir, real_normal));
+    // Diffuse multiplier
+    float diffuse = max(dot(normalize(real_normal), normalize(light)), 0.0);
 
-    // =============
-    // Determine which surface texture to use
-    // Andy & Helena
-    // FIXME Be smarter about this calculation - We simply make the whole color
-    // darker
-    // TODO: More grounds and make it better ;D
-
-    vec3 diffuse_color;
-    if (x_ground == 1) {
-        diffuse_color = texture(grass_texture, x_tex_coords).rgb;
-    } else if (x_ground == 2) {
-        diffuse_color = texture(sand_texture, x_tex_coords).rgb;
-    } else if (x_ground == 3) {
-        diffuse_color = texture(snow_texture, x_tex_coords).rgb;
-    } else if (x_ground == 4) {
-        diffuse_color = texture(dirt_texture, x_tex_coords).rgb;
-    } else if (x_ground == 5) {
-        diffuse_color = texture(stone_texture, x_tex_coords).rgb;
-    } else if (x_ground == 7) {
-        diffuse_color = texture(mulch_texture, x_tex_coords).rgb;
-    }
-
-    diffuse_color *= x_material_color;
-
-    // vec3 diffuse_color = x_material_color;
-
-    // =============
-
-    // TODO: temp fix
-    // This is how we should calculate the diffuse color component
-    // Substitute in the chosen texture
-    // vec3 diffuse_color = texture(my_texture, x_tex_coords).rgb * x_material_color;
-
-
-    // DEBUG: for showing normal map as texture
-    // vec3 normal_color_map = texture(normal_sand, x_tex_coords).rgb;
-
-    // FIXME: specular color calculation is off
-    // const vec3 specular_color = vec3(1.0, 1.0, 1.0);
-    // vec3 camera_di half_direction = normalize(normalize(-sun_dir) + camera_dir);
-    // float specular = pow(max(dot(half_direction, real_normal), 0.0), 16.0);
-    // r = normalize(-x_position);
-    // vec3
+    // Calculate specular color
+    vec3 specular_color = vec3(1.0, 1.0, 1.0);
+    vec3 half_direction = normalize(light + camera_dir);
+    float specular = pow(max(dot(half_direction, real_normal), 0.0), 10.0);
 
     // Final color calculation
-    color = diffuse_color * AMBIENT + diffuse_color * diffuse;
-    // color = diffuse_color * AMBIENT + normal_color_map * diffuse;
+    color = diffuse_color * diffuse + specular_color * specular;
 
     // TODO: FIXME Shadow broken for now
     // color = diffuse_color * AMBIENT + diffuse_color * diffuse * (1.0 - shadowFactor);
-
-    // TODO: Perhaps add specular component
-    // color += specular_color * specular;
 
     // Set Border to distinguish hexagons
     if (x_radius > 0.98) {

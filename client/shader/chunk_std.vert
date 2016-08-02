@@ -19,6 +19,7 @@ in int ground;
 out vec3 x_position;
 out vec3 surfaceNormal;
 out float x_radius;
+out float x_height;
 out vec2 x_tex_coords;
 out vec3 x_material_color;
 flat out int x_ground;
@@ -52,4 +53,5 @@ void main() {
 
     x_position = position;
     x_ground = ground;
+    x_height = height;
 }

@@ -221,7 +221,8 @@ impl Renderer {
                             camera,
                             &self.shadow_map,
                             &depth_mvp,
-                            sun_dir);
+                            sun_dir,
+                            sun.position());
             sky_view.draw_skydome(&mut hdr_buffer, camera);
             sun.draw_sun(&mut hdr_buffer, camera);
             weather.draw(&mut hdr_buffer, camera);
