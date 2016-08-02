@@ -12,6 +12,8 @@ in vec2 tex_coords;
 in float height;
 in vec3 offset;
 in vec3 material_color;
+
+// value to match the `GroundMaterial` to get the appropriate texture
 in int ground;
 
 // -----------------------
@@ -46,6 +48,7 @@ void main() {
     x_radius = radius;
     x_tex_coords = tex_coords;
 
+    // adjusting the height for the sides of each hexagon
     if(tex_coords.y > 1.5){
         x_tex_coords.y = height;
     }

@@ -38,6 +38,8 @@ impl ChunkView {
             let pos = offset.to_real() + axial.to_real();
             pillars.push(PillarView::from_pillar(pos, pillar, plant_renderer.clone(), facade));
             for section in pillar.sections() {
+
+                // matching the ground for texturing
                 let g = match section.ground {
                     GroundMaterial::Grass => 1,
                     GroundMaterial::Sand => 2,
@@ -106,10 +108,11 @@ impl ChunkView {
             depth_view_proj: depth_view_proj.to_arr(),
             sun_dir: sun_dir.to_arr(),
 
-            sand_texture:  self.renderer.noise_sand.sampled()
+            // Mipmapping and repeating the textures
+            sand_texture: self.renderer.noise_sand.sampled()
                 .minify_filter(MinifySamplerFilter::NearestMipmapLinear)
                 .wrap_function(SamplerWrapFunction::Repeat),
-            snow_texture:  self.renderer.noise_snow.sampled()
+            snow_texture: self.renderer.noise_snow.sampled()
                 .minify_filter(MinifySamplerFilter::NearestMipmapLinear)
                 .wrap_function(SamplerWrapFunction::Repeat),
             grass_texture: self.renderer.noise_grass.sampled()
@@ -172,6 +175,7 @@ implement_vertex!(Vertex, position, normal, radius, tex_coords);
 /// Instance data for each pillar section.
 #[derive(Debug, Copy, Clone)]
 pub struct Instance {
+    /// Attribute for material matching
     ground: i32,
     /// Material color.
     material_color: [f32; 3],
