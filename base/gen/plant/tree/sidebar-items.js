@@ -1,0 +1,1 @@
+initSidebarItems({"constant":[["PRESETS",""]],"struct":[["Preset","Parameters for the tree generator."],["TreeGen",""]]});

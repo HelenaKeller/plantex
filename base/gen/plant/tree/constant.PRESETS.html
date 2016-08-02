@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `PRESETS` constant in crate `base`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, PRESETS">
+
+    <title>base::gen::plant::tree::PRESETS - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../../../index.html'>base</a>::<wbr><a href='../../index.html'>gen</a>::<wbr><a href='../index.html'>plant</a>::<wbr><a href='index.html'>tree</a></p><script>window.sidebarCurrent = {name: 'PRESETS', ty: 'constant', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content constant">
+<h1 class='fqn'><span class='in-band'><a href='../../../index.html'>base</a>::<wbr><a href='../../index.html'>gen</a>::<wbr><a href='../index.html'>plant</a>::<wbr><a href='index.html'>tree</a>::<wbr><a class='constant' href=''>PRESETS</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-59' class='srclink' href='../../../../src/base/base/src/gen/plant/tree.rs.html#55-203' title='goto source code'>[src]</a></span></h1>
+<pre class='rust const'>pub const PRESETS: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;'static [</a><a class='struct' href='../../../../base/gen/plant/tree/struct.Preset.html' title='base::gen::plant::tree::Preset'>Preset</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a><code> = </code><code>&amp;[Preset{name: &quot;\&#39;Regular\&#39; Tree&quot;,
+         trunk_diameter:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 0.3 },
+                                   end: pop_unstable { 0.5 },}
+             },
+         trunk_height:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 3.0 },
+                                   end: pop_unstable { 6.0 },}
+             },
+         trunk_diameter_top:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 0.2 },
+                                   end: pop_unstable { 0.4 },}
+             },
+         min_branch_height:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 0.4 },
+                                   end: pop_unstable { 0.6 },}
+             },
+         branch_chance: 0.6,
+         branch_diameter_factor:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 0.3 },
+                                   end: pop_unstable { 0.5 },}
+             },
+         branch_angle_deg:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 70.0 },
+                                   end: pop_unstable { 110.0 },}
+             },
+         branch_diam_reduction:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 0.75 },
+                                   end: pop_unstable { 0.85 },}
+             },
+         branch_segment_length:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 11.25 },
+                                   end: pop_unstable { 11.26 },}
+             },
+         branch_segment_angle:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 5.0 },
+                                   end: pop_unstable { 15.0 },}
+             },
+         branch_segment_count:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 1 },
+                                   end: pop_unstable { 4 },}
+             },
+         branch_color:
+             (push_unstable {
+                  ::std::ops::Range{start: pop_unstable { 0.3 },
+                                    end: pop_unstable { 0.33 },}
+              },
+              push_unstable {
+                  ::std::ops::Range{start: pop_unstable { 0.9 },
+                                    end: pop_unstable { 0.99 },}
+              },
+              push_unstable {
+                  ::std::ops::Range{start: pop_unstable { 0.0 },
+                                    end: pop_unstable { 0.02 },}
+              }),
+         height_branchlength_dependence: { f },},
+  Preset{name: &quot;Shrub&quot;,
+         trunk_diameter:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 0.05 },
+                                   end: pop_unstable { 0.15 },}
+             },
+         trunk_height:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 0.5 },
+                                   end: pop_unstable { 1.5 },}
+             },
+         trunk_diameter_top:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 0.6 },
+                                   end: pop_unstable { 0.60001 },}
+             },
+         min_branch_height:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 0.4 },
+                                   end: pop_unstable { 0.6 },}
+             },
+         branch_chance: 10.0,
+         branch_diameter_factor:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 0.3 },
+                                   end: pop_unstable { 0.5 },}
+             },
+         branch_angle_deg:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 60.0 },
+                                   end: pop_unstable { 100.0 },}
+             },
+         branch_diam_reduction:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 0.70 },
+                                   end: pop_unstable { 0.80 },}
+             },
+         branch_segment_length:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 11.25 },
+                                   end: pop_unstable { 11.26 },}
+             },
+         branch_segment_angle:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 15.0 },
+                                   end: pop_unstable { 20.0 },}
+             },
+         branch_segment_count:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 1 },
+                                   end: pop_unstable { 4 },}
+             },
+         branch_color:
+             (push_unstable {
+                  ::std::ops::Range{start: pop_unstable { 0.9 },
+                                    end: pop_unstable { 0.99 },}
+              },
+              push_unstable {
+                  ::std::ops::Range{start: pop_unstable { 0.1 },
+                                    end: pop_unstable { 0.11 },}
+              },
+              push_unstable {
+                  ::std::ops::Range{start: pop_unstable { 0.0 },
+                                    end: pop_unstable { 0.05 },}
+              }),
+         height_branchlength_dependence: { f },},
+  Preset{name: &quot;Cactus&quot;,
+         trunk_diameter:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 0.6 },
+                                   end: pop_unstable { 0.60001 },}
+             },
+         trunk_height:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 2.0 },
+                                   end: pop_unstable { 4.0 },}
+             },
+         trunk_diameter_top:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 0.6 },
+                                   end: pop_unstable { 0.60001 },}
+             },
+         min_branch_height:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 0.05 },
+                                   end: pop_unstable { 0.1 },}
+             },
+         branch_chance: 5.0,
+         branch_diameter_factor:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 0.1 },
+                                   end: pop_unstable { 0.15 },}
+             },
+         branch_angle_deg:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 90.0 },
+                                   end: pop_unstable { 90.00001 },}
+             },
+         branch_diam_reduction:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 0.90 },
+                                   end: pop_unstable { 0.95 },}
+             },
+         branch_segment_length:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 2.0 },
+                                   end: pop_unstable { 4.0 },}
+             },
+         branch_segment_angle:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 0.0 },
+                                   end: pop_unstable { 0.00001 },}
+             },
+         branch_segment_count:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 1 },
+                                   end: pop_unstable { 2 },}
+             },
+         branch_color:
+             (push_unstable {
+                  ::std::ops::Range{start: pop_unstable { 0.3 },
+                                    end: pop_unstable { 0.59 },}
+              },
+              push_unstable {
+                  ::std::ops::Range{start: pop_unstable { 0.75 },
+                                    end: pop_unstable { 0.88 },}
+              },
+              push_unstable {
+                  ::std::ops::Range{start: pop_unstable { 0.08 },
+                                    end: pop_unstable { 0.15 },}
+              }),
+         height_branchlength_dependence: { f },},
+  Preset{name: &quot;Jungle Tree&quot;,
+         trunk_diameter:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 1.0 },
+                                   end: pop_unstable { 2.0 },}
+             },
+         trunk_height:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 17.0 },
+                                   end: pop_unstable { 21.0 },}
+             },
+         trunk_diameter_top:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 0.6 },
+                                   end: pop_unstable { 1.0 },}
+             },
+         min_branch_height:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 0.6 },
+                                   end: pop_unstable { 0.7 },}
+             },
+         branch_chance: 1.2,
+         branch_diameter_factor:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 0.3 },
+                                   end: pop_unstable { 0.5 },}
+             },
+         branch_angle_deg:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 80.0 },
+                                   end: pop_unstable { 100.0 },}
+             },
+         branch_diam_reduction:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 0.5 },
+                                   end: pop_unstable { 0.75 },}
+             },
+         branch_segment_length:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 11.25 },
+                                   end: pop_unstable { 11.26 },}
+             },
+         branch_segment_angle:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 10.0 },
+                                   end: pop_unstable { 13.0 },}
+             },
+         branch_segment_count:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 3 },
+                                   end: pop_unstable { 4 },}
+             },
+         branch_color:
+             (push_unstable {
+                  ::std::ops::Range{start: pop_unstable { 0.3 },
+                                    end: pop_unstable { 0.33 },}
+              },
+              push_unstable {
+                  ::std::ops::Range{start: pop_unstable { 0.1 },
+                                    end: pop_unstable { 0.11 },}
+              },
+              push_unstable {
+                  ::std::ops::Range{start: pop_unstable { 0.9 },
+                                    end: pop_unstable { 0.99 },}
+              }),
+         height_branchlength_dependence: { f },},
+  Preset{name: &quot;Clump Of Grass&quot;,
+         trunk_diameter:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 0.03 },
+                                   end: pop_unstable { 0.8 },}
+             },
+         trunk_height:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 0.3 },
+                                   end: pop_unstable { 0.8 },}
+             },
+         trunk_diameter_top:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 0.03 },
+                                   end: pop_unstable { 0.8 },}
+             },
+         min_branch_height:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 0.1 },
+                                   end: pop_unstable { 0.3 },}
+             },
+         branch_chance: 12.0,
+         branch_diameter_factor:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 0.3 },
+                                   end: pop_unstable { 0.5 },}
+             },
+         branch_angle_deg:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 60.0 },
+                                   end: pop_unstable { 100.0 },}
+             },
+         branch_diam_reduction:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 0.70 },
+                                   end: pop_unstable { 0.80 },}
+             },
+         branch_segment_length:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 8.0 },
+                                   end: pop_unstable { 10.0 },}
+             },
+         branch_segment_angle:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 25.0 },
+                                   end: pop_unstable { 30.0 },}
+             },
+         branch_segment_count:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 1 },
+                                   end: pop_unstable { 4 },}
+             },
+         branch_color:
+             (push_unstable {
+                  ::std::ops::Range{start: pop_unstable { 0.1 },
+                                    end: pop_unstable { 0.25 },}
+              },
+              push_unstable {
+                  ::std::ops::Range{start: pop_unstable { 0.6 },
+                                    end: pop_unstable { 0.8 },}
+              },
+              push_unstable {
+                  ::std::ops::Range{start: pop_unstable { 0.0 },
+                                    end: pop_unstable { 0.06 },}
+              }),
+         height_branchlength_dependence: { f },},
+  Preset{name: &quot;Conifer&quot;,
+         trunk_diameter:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 0.5 },
+                                   end: pop_unstable { 0.8 },}
+             },
+         trunk_height:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 5.0 },
+                                   end: pop_unstable { 8.0 },}
+             },
+         trunk_diameter_top:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 0.3 },
+                                   end: pop_unstable { 0.5 },}
+             },
+         min_branch_height:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 0.1 },
+                                   end: pop_unstable { 0.2 },}
+             },
+         branch_chance: 3.4,
+         branch_diameter_factor:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 0.3 },
+                                   end: pop_unstable { 0.5 },}
+             },
+         branch_angle_deg:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 90.0 },
+                                   end: pop_unstable { 90.00001 },}
+             },
+         branch_diam_reduction:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 0.75 },
+                                   end: pop_unstable { 0.85 },}
+             },
+         branch_segment_length:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 11.25 },
+                                   end: pop_unstable { 11.26 },}
+             },
+         branch_segment_angle:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 1.0 },
+                                   end: pop_unstable { 2.0 },}
+             },
+         branch_segment_count:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 1 },
+                                   end: pop_unstable { 4 },}
+             },
+         branch_color:
+             (push_unstable {
+                  ::std::ops::Range{start: pop_unstable { 0.13 },
+                                    end: pop_unstable { 0.18 },}
+              },
+              push_unstable {
+                  ::std::ops::Range{start: pop_unstable { 0.2 },
+                                    end: pop_unstable { 0.22 },}
+              },
+              push_unstable {
+                  ::std::ops::Range{start: pop_unstable { 0.05 },
+                                    end: pop_unstable { 0.09 },}
+              }),
+         height_branchlength_dependence: { f },},
+  Preset{name: &quot;Oak Tree&quot;,
+         trunk_diameter:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 0.4 },
+                                   end: pop_unstable { 0.6 },}
+             },
+         trunk_height:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 5.9 },
+                                   end: pop_unstable { 6.0 },}
+             },
+         trunk_diameter_top:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 0.3 },
+                                   end: pop_unstable { 0.5 },}
+             },
+         min_branch_height:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 0.5 },
+                                   end: pop_unstable { 0.51 },}
+             },
+         branch_chance: 4.0,
+         branch_diameter_factor:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 0.3 },
+                                   end: pop_unstable { 0.5 },}
+             },
+         branch_angle_deg:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 90.0 },
+                                   end: pop_unstable { 90.0001 },}
+             },
+         branch_diam_reduction:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 0.6 },
+                                   end: pop_unstable { 0.7 },}
+             },
+         branch_segment_length:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 11.25 },
+                                   end: pop_unstable { 11.26 },}
+             },
+         branch_segment_angle:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 5.0 },
+                                   end: pop_unstable { 15.0 },}
+             },
+         branch_segment_count:
+             push_unstable {
+                 ::std::ops::Range{start: pop_unstable { 3 },
+                                   end: pop_unstable { 4 },}
+             },
+         branch_color:
+             (push_unstable {
+                  ::std::ops::Range{start: pop_unstable { 0.1 },
+                                    end: pop_unstable { 0.15 },}
+              },
+              push_unstable {
+                  ::std::ops::Range{start: pop_unstable { 0.1 },
+                                    end: pop_unstable { 0.15 },}
+              },
+              push_unstable {
+                  ::std::ops::Range{start: pop_unstable { 0.9 },
+                                    end: pop_unstable { 0.95 },}
+              }),
+         height_branchlength_dependence: { f },}]</code></pre></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../../";
+        window.currentCrate = "base";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../../../jquery.js"></script>
+    <script src="../../../../main.js"></script>
+    
+    <script defer src="../../../../search-index.js"></script>
+</body>
+</html>
